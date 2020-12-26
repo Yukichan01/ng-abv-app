@@ -1,0 +1,24 @@
+<form (ngSubmit)="onAddItem(f)" #f="ngForm" ngNativeValidate>
+    <div class="form-group invisible">
+        <input type="text" class="form-control" id="id" placeholder="Enter fullname" ngModel name="id" #id="ngModel">
+    </div>
+    <div class="form-group ">
+        <label for="name ">Name</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter fullname" ngModel name="name" required #name="ngModel">
+        <span class="help-block" *ngIf="!name.valid && name.touched">Please enter fullname</span>
+    </div>
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="aaaa@bbbb.com" ngModel name="email" required email #email="ngModel">
+        <span class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email</span>
+    </div>
+    <div class="form-group">
+        <label for="phone">Contact Number</label>
+        <input type="tel" class="form-control" id="phone" placeholder="Enter contact number" ngModel name="phone" required #phone="ngModel">
+        <span class="help-block" *ngIf="!phone.valid && phone.touched"> Please enter contact number</span>
+    </div>
+    <button type="submit" class="btn btn-default btn-sm" [disabled]="!f.valid">
+        <span class="glyphicon glyphicon-plus-sign"></span>
+        {{ updateMode ? 'Update' : 'Add'}}
+      </button>
+</form>
