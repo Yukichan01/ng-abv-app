@@ -1,0 +1,8 @@
+Hi! Welcome to my angular app
+
+Before running this project, run "npm install -g @angular/cli" inside this project folder to install all dependencies.
+And install Bootstrap CSS Frame work "npm install --save bootstrap@3 " (because I use bootstrap for the UI) 
+
+Run "ng serve" to see the app in action, (try "npm start" in case "ng serve" fails).
+
+Thank you.
